@@ -1,12 +1,9 @@
-using System.Data.SqlClient;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Serilog;
-using Serilog.Context;
 
 namespace ProtoClusterDemo.Web
 {
@@ -39,8 +36,6 @@ namespace ProtoClusterDemo.Web
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProtoClusterDemo v1"));
             }
-
-//            app.UseSerilogRequestLogging();
 
             app.UseRouting();
 

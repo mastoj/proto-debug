@@ -3,6 +3,6 @@ POST http://localhost:5000/Benchmark/proto
 Content-Type: application/json
 
 {
-    "numberOfWorkers": 2,
-    "numberOfMessagesPerWorker": 100
+    "numberOfWorkers": 32,
+    "numberOfMessagesPerWorker": 1000000
 }

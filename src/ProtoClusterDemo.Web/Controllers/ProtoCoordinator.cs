@@ -87,7 +87,7 @@ namespace ProtoClusterDemo.Web.Controllers
                     if(State.WorkerResults.Count == State.NumberOfWorkers)
                     {
                         State.Watch.Stop();
-                        var elapsedTime = State.Watch.ElapsedMilliseconds;
+                        var elapsedTime = State.Watch.ElapsedMilliseconds + 1;
                         var totalNumberOfMessages = State.WorkerResults.Sum(y => y.NumberOfMessages);
                         var result = new BenchmarkResult {
                             WorkerResults = State.WorkerResults,
